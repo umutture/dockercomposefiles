@@ -1,0 +1,18 @@
+version: '3'
+services:
+  jenkins:
+    container_name: jenkinsvolumed
+    image: jenkins/jenkins:lts-jdk11
+    ports:
+      - 8080:8080
+      - 50000:50000
+    # environment:
+    #   - MONGO_INITDB_ROOT_USERNAME=admin
+    #   - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - jenkins-data:/var/jenkins_home
+
+volumes:
+  jenkins-data:
+
+# admin Pass1234
