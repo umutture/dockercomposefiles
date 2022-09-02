@@ -2,8 +2,8 @@ version: '3'
 services:
   mongodb:
     container_name: mongocompose
-    # MongoDB 5.0+ requires a CPU with AVX support, that is why we dont use 
-    image: mongo:4.4.6 
+    # MongoDB 5.0+ requires a CPU with AVX support, that is why we dont use  lates (4.4.6 )
+    image: mongo:4.4.6
     ports:
       - 27017:27017
     environment:
