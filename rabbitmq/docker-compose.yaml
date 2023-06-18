@@ -1,0 +1,41 @@
+version: '3'
+services:
+  rabbitmq1:
+    image: rabbitmq:3.8-management-alpine
+    hostname: rabbitmq1
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "mycookie"
+      RABBITMQ_NODENAME: "rabbitmq1"
+      RABBITMQ_CLUSTER_NODE_TYPE: "disc"
+      RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: "-rabbitmq cluster_formation.peer_discovery_backend rabbit_peer_discovery_classic_config"
+
+  rabbitmq2:
+    image: rabbitmq:3.8-management-alpine
+    hostname: rabbitmq2
+    ports:
+      - 5673:5672
+      - 15673:15672
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "mycookie"
+      RABBITMQ_NODENAME: "rabbitmq2"
+      RABBITMQ_CLUSTER_NODE_TYPE: "disc"
+      RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: "-rabbitmq cluster_formation.peer_discovery_backend rabbit_peer_discovery_classic_config"
+    depends_on:
+      - rabbitmq1
+
+  rabbitmq3:
+    image: rabbitmq:3.8-management-alpine
+    hostname: rabbitmq3
+    ports:
+      - 5674:5672
+      - 15674:15672
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "mycookie"
+      RABBITMQ_NODENAME: "rabbitmq3"
+      RABBITMQ_CLUSTER_NODE_TYPE: "disc"
+      RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS: "-rabbitmq cluster_formation.peer_discovery_backend rabbit_peer_discovery_classic_config"
+    depends_on:
+      - rabbitmq1
