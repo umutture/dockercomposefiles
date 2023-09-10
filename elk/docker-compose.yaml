@@ -39,3 +39,5 @@ services:
 
 volumes:
   elastic_data:
+
+  # kapanıp duruyorsa docker memory size arttırmak lazım (macOS)

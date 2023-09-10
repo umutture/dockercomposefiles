@@ -11,3 +11,13 @@ docker run -d --name jaeger   -e COLLECTOR_ZIPKIN_HOST_PORT=:9411  -e COLLECTOR_
 
 
 docker run --name jaeger   -e COLLECTOR_OTLP_ENABLED=true   -p 16686:16686   -p 4317:4317   -p 4318:4318   jaegertracing/all-in-one:1.35
+
+------------
+
+OpenTelemetry Collector (OTel Collector) is a vendor-agnostic, open-source component of the OpenTelemetry project that can collect, process, and export telemetry data. It provides a unified way to receive, process, and export traces, metrics, and logs from multiple sources.
+
+Jaeger is an open-source tracing platform that can be used to monitor and troubleshoot distributed systems. It provides a way to visualize, analyze, and troubleshoot distributed traces.
+
+The relation between OpenTelemetry Collector and Jaeger is that OTel Collector can be used to collect and process trace data from applications instrumented with OpenTelemetry, and then export this data to Jaeger for visualization and analysis. OTel Collector can transform the data into a format that Jaeger can understand and send it to Jaeger's backend for storage and analysis.
+
+In summary, OpenTelemetry Collector acts as an intermediary between instrumented applications and tracing platforms like Jaeger, allowing you to collect and process trace data from multiple sources and export it to the tracing platform of your choice.

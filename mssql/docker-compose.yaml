@@ -1,8 +1,8 @@
 version: '3'
 services:
   mssql:
-    container_name: mssqlvolumed
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssqlvolumed2022
+    image: mcr.microsoft.com/mssql/server:2022-latest
     ports:
       - 1433:1433 
     environment:
@@ -13,3 +13,7 @@ services:
 
 volumes:
   sql-data:
+
+
+# macos de 
+# docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=Pass1234' -p 1433:1433 --name sqledge -d mcr.microsoft.com/azure-sql-edge
