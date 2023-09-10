@@ -1,1 +1,5 @@
 docker run --hostname=45869c0adb7d --mac-address=02:42:ac:11:00:02 --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -p 49161:1521 --restart=no --runtime=runc -d oracleinanutshell/oracle-xe-11g
+
+
+docker run -d --hostname my-rabbitmq-server --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+
