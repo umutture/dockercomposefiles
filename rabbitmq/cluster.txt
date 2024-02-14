@@ -1,0 +1,1 @@
+cluster oluşturmak için compose sonrası yapılacaklar;
