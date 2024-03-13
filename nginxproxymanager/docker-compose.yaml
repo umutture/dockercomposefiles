@@ -2,7 +2,7 @@ version: "3"
 services:
   app:
     image: 'jc21/nginx-proxy-manager:latest'
-    restart: unless-stopped
+    # restart: unless-stopped
     ports:
       # These ports are in format <host-port>:<container-port>
       - '9080:80' # Public HTTP Port
