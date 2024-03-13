@@ -1,0 +1,17 @@
+3 node olsun. 2 ve 3 te sırayla aşağıdaki komutlar çalıştırılır. Çıkan uyarı dikkate alınmaz. management ui dan kontrol edilebilir
+
+
+
+/ # rabbitmqctl stop_app
+RABBITMQ_ERLANG_COOKIE env variable support is deprecated and will be REMOVED in a future version. Use the $HOME/.erlang.cookie file or the --erlang-cookie switch instead.
+Stopping rabbit application on node rabbitmq3@rabbitmq3 ...
+/ # rabbitmqctl reset
+RABBITMQ_ERLANG_COOKIE env variable support is deprecated and will be REMOVED in a future version. Use the $HOME/.erlang.cookie file or the --erlang-cookie switch instead.
+Resetting node rabbitmq3@rabbitmq3 ...
+/ # rabbitmqctl join_cluster rabbitmq1@rabbitmq1
+RABBITMQ_ERLANG_COOKIE env variable support is deprecated and will be REMOVED in a future version. Use the $HOME/.erlang.cookie file or the --erlang-cookie switch instead.
+Clustering node rabbitmq3@rabbitmq3 with rabbitmq1@rabbitmq1
+/ # rabbitmqctl start_app
+RABBITMQ_ERLANG_COOKIE env variable support is deprecated and will be REMOVED in a future version. Use the $HOME/.erlang.cookie file or the --erlang-cookie switch instead.
+Starting node rabbitmq3@rabbitmq3 ...
+/ #

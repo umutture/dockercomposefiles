@@ -60,3 +60,5 @@ services:
   #     - 19000:9000
   #   environment:
   #     KAFKA_BROKERCONNECT: kafka-1:9092,kafka-2:9092
+
+# bunu kullanıyoruz
