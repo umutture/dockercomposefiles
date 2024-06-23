@@ -61,4 +61,17 @@ services:
   #   environment:
   #     KAFKA_BROKERCONNECT: kafka-1:9092,kafka-2:9092
 
+  # bu alttaki güzel bir ui, mesajlara bakabiliyoruz consumer aç mantığı değil.
+  # http://localhost:8080/ui/clusters/create-new-cluster 
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    depends_on:
+      - kafka-1
+      - kafka-2
+    ports:
+      - 8080:8080
+    environment:
+      DYNAMIC_CONFIG_ENABLED: true
+
 # bunu kullanıyoruz
