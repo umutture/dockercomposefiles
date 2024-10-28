@@ -1,0 +1,3 @@
+sudo docker run -itd --name mydb2 --privileged=true -p 50000:50000 -e LICENSE=accept -e DB2INST1_PASSWORD=Pass1234 -e DBNAME=testdb -v /usr/share/db2:/database ibmcom/db2
+
+user db2inst1 oluyor.

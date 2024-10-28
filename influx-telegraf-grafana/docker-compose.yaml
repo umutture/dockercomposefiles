@@ -25,6 +25,7 @@ services:
   #     - influxdb
 
 
+# admin admin user pass
   grafana:
   # -oss:8.4.3
     image: grafana/grafana

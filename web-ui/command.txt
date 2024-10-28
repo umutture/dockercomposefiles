@@ -1,0 +1,10 @@
+-- docker dan host networkda container kaldırmak için
+sudo docker run -d -p 3000:8080 --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main 
+
+-- docker dan host daki ollamaya erişim
+sudo docker run -d -p 3001:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+
+-- NOT : ubuntuda ollamaya erişemiyor. OLLAMA sadece localhost a port açıyor bunu değiştirmek için;
+
+in the /etc/systemd/system/ollama.service file, you may also add
+Environment="OLLAMA_HOST=0.0.0.0:8080" (yeni satır olarak mevcutta Enviroment varsa)
