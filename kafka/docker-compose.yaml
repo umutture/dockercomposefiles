@@ -63,6 +63,7 @@ services:
 
   # bu alttaki güzel bir ui, mesajlara bakabiliyoruz consumer aç mantığı değil.
   # http://localhost:8080/ui/clusters/create-new-cluster 
+  # kafka-1 39092, kafka-2 29092 ile bağlanıyor niyeyse..
 
   kafka-ui:
     image: provectuslabs/kafka-ui:latest

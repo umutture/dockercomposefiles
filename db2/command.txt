@@ -1,3 +1,5 @@
 sudo docker run -itd --name mydb2 --privileged=true -p 50000:50000 -e LICENSE=accept -e DB2INST1_PASSWORD=Pass1234 -e DBNAME=testdb -v /usr/share/db2:/database ibmcom/db2
 
 user db2inst1 oluyor.
+dbeaver bağlanmadı connection refused dedi. db2 yi silip baştan ayağa kaldırdım. sonra db name sildim bağlanmayı denedim başka bir hata verdi
+sonra tekrar db name girdim ve bağlandı.
